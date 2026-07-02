@@ -7,12 +7,20 @@
 /* Common styles */
 @import url('./reset.css');
 @import url('./base.css');
+@import url('./section.css');
 @import url('./container.css');
 @import url('./animations.css');
 
 /* Sections style */
 @import url('./header.css');
-@import url('./vite-promo.css');
-@import url('./badges.css');
-@import url('./back-link.css');
+@import url('./hero.css');
+@import url('./about.css');
+@import url('./howToPlay.css');
+@import url('./features.css');
+@import url('./faq.css');
+@import url('./contact.css');
 @import url('./footer.css');
+@import url(./privacyPolicy.css);
+@import url(./termsOfService.css);
+
+@import url('./back-link.css');
