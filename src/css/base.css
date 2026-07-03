@@ -27,10 +27,18 @@ html {
 
 body {
   display: flex;
+  background: var(--background-fon);
   flex-direction: column;
+  justify-content: center;
   min-width: 100vw;
   min-height: 100vh;
   margin: 0;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  text-align: justify;
+  color: var(--text-body);
 }
 
 main {

@@ -1,33 +1,33 @@
-<header class="header">
+<header class="header" data-menu="close" data-el="header">
   <div class="container">
-    <div class="wrapper">
-      <nav class="nav">
-        <a class="nav-logo" href="./index.html" aria-label="Site logo">
-          <svg class="nav-logo-icon" width="100" height="30">
-            <use href="{=$icon-path}"></use>
-          </svg>
-          <svg class="nav-logo-icon" width="100" height="30">
-            <use href="{=$icon-path2}"></use>
-          </svg>
-          Заглушка лого
+    <nav class="nav-header">
+      <div class="wrapper-header">
+        <a class="nav-header-logo" href="./index.html" aria-label="Site logo">
+          <img src="" alt="" class="logo" width="46" height="46" />
+          <div class="logo-wrapper">
+            <p>Match Triple 3D</p>
+            <p>Organize the chaos one match at a time</p>
+          </div>
         </a>
-      </nav>
-      <div class="header__burger-wrapper">
-        <button type="button" class="burger-btn" data-action="open">
+        <button class="burger-open" type="button" data-action="open">
           Open menu
         </button>
-        <div class="burger-menu" data-visible="close">
-          <ul>
-            <li><a href="#">link-1</a></li>
-            <li><a href="#">link-2</a></li>
-            <li><a href="#">link-3</a></li>
-            <li><a href="#">link-4</a></li>
-          </ul>
-          <button type="button" class="btn-close" data-action="close">
-            close
-          </button>
-        </div>
+        <button class="burger-close" type="button" data-action="close">
+          Close menu
+        </button>
       </div>
-    </div>
+
+      <ul class="nav-header-list" data-visible="close">
+        <li>
+          <a class="nav-header-list-item" href="#about">About the game</a>
+        </li>
+        <li>
+          <a class="nav-header-list-item" href="#howToPlay">How to Play</a>
+        </li>
+        <li><a class="nav-header-list-item" href="#features">Features</a></li>
+        <li><a class="nav-header-list-item" href="#FAQ">FAQ</a></li>
+        <li><a class="nav-header-list-item" href="#contact">Contact</a></li>
+      </ul>
+    </nav>
   </div>
 </header>
