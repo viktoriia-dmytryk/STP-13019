@@ -1,0 +1,36 @@
+@keyframes header-move {
+  0% {
+    top: -65px;
+  }
+  100% {
+    top: 12px;
+  }
+}
+
+.header {
+  position: fixed;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 8px 16px;
+  width: 375px;
+  background: var(--heder);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.12);
+  border-radius: 8px;
+  animation-name: header-move;
+  animation-duration: 1.5s;
+  animation-delay: 200ms;
+  animation-fill-mode: forwards;
+  max-height: 57px;
+
+  @media only screen and (min-width: 1440px) {
+    width: 1297px;
+    padding: 20px 72px;
+  }
+}
+
+.header .wrapper {
+  display: flex;
+  justify-content: space-between;
+}
