@@ -23,16 +23,18 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
   display: flex;
   background: var(--background-fon);
   flex-direction: column;
-  justify-content: center;
-  min-width: 100vw;
+  justify-content: flex-start;
+  min-width: 320px;
   min-height: 100vh;
   margin: 0;
+  overflow-x: hidden;
   font-family: var(--font-family);
   font-weight: 400;
   font-size: 14px;
@@ -42,5 +44,5 @@ body {
 }
 
 main {
-  flex-grow: 1;
+  flex-grow: 0;
 }
