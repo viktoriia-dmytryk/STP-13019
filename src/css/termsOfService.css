@@ -1,0 +1,11 @@
+.service-page .policy-subtitle {
+  text-transform: capitalize;
+}
+.service-page .container {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  @media only screen and (min-width: 1440px) {
+    gap: 8px;
+  }
+}

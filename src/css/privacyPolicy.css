@@ -1,0 +1,115 @@
+.policy-page {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 8px;
+  padding-bottom: 16px;
+  @media only screen and (min-width: 1440px) {
+    gap: 16px;
+    padding-top: 12px;
+    padding-bottom: 72px;
+  }
+}
+.policy-page .container {
+  width: 100%;
+  max-width: 375px;
+
+  @media only screen and (min-width: 1440px) {
+    max-width: 856px;
+    padding: 0;
+  }
+}
+.policy-section .container {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  @media only screen and (min-width: 1440px) {
+    gap: 8px;
+  }
+}
+
+.policy-title {
+  font-family: var(--third-family);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-title);
+
+  -webkit-text-stroke: 4px #801d8a;
+  paint-order: stroke fill;
+
+  text-shadow: -2px 0px 0 #801d8a;
+
+  @media only screen and (min-width: 1440px) {
+    font-size: 40px;
+    line-height: 48px;
+
+    -webkit-text-stroke: 9px #801d8a;
+    text-shadow: -3px 2px 0 #801d8a;
+  }
+}
+.date {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 150%;
+  text-align: justify;
+
+  @media only screen and (min-width: 1440px) {
+    font-weight: 400;
+    font-size: 16px;
+  }
+}
+.policy-subtitle {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+
+  @media only screen and (min-width: 1440px) {
+    font-size: 20px;
+    line-height: 140%;
+  }
+}
+.policy-description {
+  font-size: 14px;
+  line-height: 150%;
+  @media only screen and (min-width: 1440px) {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+  }
+}
+
+.policy-list {
+  list-style: disc;
+  font-size: 14px;
+  line-height: 150%;
+  text-align: justify;
+  padding-left: 25px;
+  @media only screen and (min-width: 1440px) {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+  }
+}
+.domain {
+  text-decoration: underline;
+  transition: color 300ms cubic-bezier(0.27, 0.59, 0.76, 0.83);
+}
+
+.domain:hover,
+.domain:focus-visible {
+  color: var(--text-title);
+}
+.domain:active {
+  color: var(--white);
+}
+.policy-page > *:first-child {
+  margin-bottom: 8px;
+
+  @media only screen and (min-width: 1440px) {
+    margin-bottom: 0;
+  }
+}
