@@ -14,8 +14,8 @@ const SIZE_MOBILE = { min: 311, max: 538 };
 const SIZE_DESKTOP = { min: 739, max: 1563 };
 const BREAKPOINT = '(min-width: 1440px)';
 
-const DURATION_MIN = 22; // сек, для найменшої хмаринки (sizeRatio 0)
-const DURATION_MAX = 65; // сек, для найбільшої хмаринки (sizeRatio 1)
+const DURATION_MIN = 22;
+const DURATION_MAX = 65;
 
 const IMAGE_BASE_TILT = 9.22;
 
