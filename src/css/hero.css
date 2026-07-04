@@ -80,14 +80,16 @@
   display: inline-flex;
   width: 123px;
   height: 36px;
+  transform-origin: center;
   transition:
     transform 200ms ease,
     filter 200ms ease;
 }
 
 .hero-store-link:hover,
-.hero-store-link:focus-visible {
-  transform: translateY(-2px);
+.hero-store-link:focus-visible,
+.hero-store-link:active {
+  transform: scale(0.9);
   filter: drop-shadow(0 6px 10px rgba(83, 23, 89, 0.22));
 }
 
