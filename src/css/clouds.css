@@ -6,7 +6,7 @@
   height: 100%;
   overflow: hidden;
   pointer-events: none;
-  z-index: 0;
+  z-index: -1;
 }
 
 .cloud-anchor {
@@ -53,11 +53,6 @@
     transform: translateX(130vw) scale(0.94);
     opacity: 0;
   }
-}
-
-body > *:not(.clouds-layer) {
-  position: relative;
-  z-index: 1;
 }
 
 @media (prefers-reduced-motion: reduce) {

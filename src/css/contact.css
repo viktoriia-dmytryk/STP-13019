@@ -1,7 +1,3 @@
-.contact {
-  background-color: var(--background-fon);
-}
-
 .contact-container {
   position: relative;
   display: flex;
@@ -42,10 +38,7 @@
       rgba(217, 241, 255, 0.75) 0 62%,
       transparent 63%
     ),
-    radial-gradient(
-      ellipse at center,
-      rgba(210, 238, 255, 0.62) 0 100%
-    );
+    radial-gradient(ellipse at center, rgba(210, 238, 255, 0.62) 0 100%);
   content: '';
 }
 
@@ -249,10 +242,7 @@
         rgba(217, 241, 255, 0.75) 0 62%,
         transparent 63%
       ),
-      radial-gradient(
-        ellipse at center,
-        rgba(210, 238, 255, 0.62) 0 100%
-      );
+      radial-gradient(ellipse at center, rgba(210, 238, 255, 0.62) 0 100%);
     opacity: 1;
   }
 
