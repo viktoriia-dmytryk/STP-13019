@@ -1,3 +1,8 @@
+import cloudWebp1x from '../img/webp/cloud@1x.webp';
+import cloudWebp2x from '../img/webp/cloud@2x.webp';
+import cloudPng1x from '../img/png/cloud@1x.png';
+import cloudPng2x from '../img/png/cloud@2x.png';
+
 const CLOUDS_CONFIG = [
   { top: 4, rotate: -6, flip: false, sizeRatio: 1.0, opacity: 1 },
   { top: 14, rotate: 10, flip: true, sizeRatio: 0.35, opacity: 1 },
@@ -14,8 +19,8 @@ const SIZE_MOBILE = { min: 311, max: 538 };
 const SIZE_DESKTOP = { min: 739, max: 1563 };
 const BREAKPOINT = '(min-width: 1440px)';
 
-const DURATION_MIN = 22;
-const DURATION_MAX = 65;
+const DURATION_MOBILE = { min: 22, max: 65 };
+const DURATION_DESKTOP = { min: 33, max: 98 };
 
 const IMAGE_BASE_TILT = 9.22;
 
@@ -23,10 +28,9 @@ function getImageRotation(cfg) {
   return cfg.flip ? IMAGE_BASE_TILT : -IMAGE_BASE_TILT;
 }
 
-const CLOUD_WEBP_SRCSET =
-  '/img/webp/cloud@1x.webp 1x, /img/webp/cloud@2x.webp 2x';
-const CLOUD_PNG_SRCSET = '/img/png/cloud@1x.png 1x, /img/png/cloud@2x.png 2x';
-const CLOUD_PNG_SRC = '/img/png/cloud@1x.png';
+const CLOUD_WEBP_SRCSET = `${cloudWebp1x} 1x, ${cloudWebp2x} 2x`;
+const CLOUD_PNG_SRCSET = `${cloudPng1x} 1x, ${cloudPng2x} 2x`;
+const CLOUD_PNG_SRC = cloudPng1x;
 
 function getWidthForRatio(ratio) {
   const isDesktop = window.matchMedia(BREAKPOINT).matches;
@@ -35,7 +39,9 @@ function getWidthForRatio(ratio) {
 }
 
 function getDurationForRatio(ratio) {
-  return DURATION_MIN + ratio * (DURATION_MAX - DURATION_MIN);
+  const isDesktop = window.matchMedia(BREAKPOINT).matches;
+  const { min, max } = isDesktop ? DURATION_DESKTOP : DURATION_MOBILE;
+  return min + ratio * (max - min);
 }
 
 function shuffle(arr) {
