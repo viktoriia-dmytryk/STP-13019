@@ -1,8 +1,8 @@
-const faqItems = document.querySelectorAll('.faq-item');
+const faqItems = document.querySelectorAll('[data-faq-item]');
 
 faqItems.forEach(item => {
-  const button = item.querySelector('.faq-toggle');
-  const answer = item.querySelector('.faq-answer');
+  const button = item.querySelector('[data-faq-toggle]');
+  const answer = item.querySelector('[data-faq-answer]');
 
   button.addEventListener('click', () => {
     const isOpen = button.getAttribute('aria-expanded') === 'true';
