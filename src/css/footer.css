@@ -1,5 +1,113 @@
-.nav-list-privacy {
+.footer {
+  min-height: 165px;
+  background-color: var(--background-card);
+  background-image: image-set(
+    url('../img/jpeg/desktop footer@1x.jpg') 1x,
+    url('../img/jpeg/desktop footer@2x.jpg') 2x
+  );
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 1440px 165px;
+}
+
+.footer-container {
+  display: flex;
+  min-height: 165px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.footer-nav-list {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 264px;
+  gap: 16px;
+  min-height: 32px;
+  margin-bottom: 8px;
+}
+
+.footer-nav-link {
+  display: block;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0;
+  text-align: center;
+  color: var(--white);
+  transition: color 200ms ease;
+}
+
+.footer-nav-link:hover,
+.footer-nav-link:focus-visible {
+  color: var(--text-title);
+}
+
+.footer-nav-link:focus-visible {
+  outline: 2px solid var(--text-title);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+.footer-copyright {
+  width: 274px;
+  max-width: 100%;
+  font-family: var(--font-family);
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: 0;
+  text-align: center;
+  color: var(--white);
+}
+
+.footer-copyright-link {
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-underline-offset: 2px;
+  transition: color 200ms ease;
+}
+
+.footer-copyright-link:hover,
+.footer-copyright-link:focus-visible {
+  color: var(--text-title);
+}
+
+.footer-copyright-link:focus-visible {
+  outline: 2px solid var(--text-title);
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+@media only screen and (max-width: 1439px) {
+  .footer-nav-list {
+    width: 192px;
+    min-height: 32px;
+    gap: 16px;
+    margin-bottom: 2px;
+  }
+
+  .footer-nav-link {
+    padding: 0;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.5;
+    white-space: nowrap;
+  }
+
+  .footer-copyright {
+    width: 235px;
+    font-size: 12px;
+    line-height: 1.5;
+  }
+}
+
+@media only screen and (max-width: 374px) {
+  .footer-copyright {
+    width: 230px;
+  }
 }
