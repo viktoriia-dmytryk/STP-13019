@@ -20,7 +20,7 @@ const SIZE_DESKTOP = { min: 739, max: 1563 };
 const BREAKPOINT = '(min-width: 1440px)';
 
 const DURATION_MOBILE = { min: 22, max: 65 };
-const DURATION_DESKTOP = { min: 33, max: 98 };
+const DURATION_DESKTOP = { min: 38, max: 113 };
 
 const IMAGE_BASE_TILT = 9.22;
 
@@ -119,15 +119,7 @@ function initCloudsFlight() {
     });
   }
 
-  function syncHeight() {
-    layer.style.height = document.body.scrollHeight + 'px';
-  }
-  syncHeight();
-
-  window.addEventListener('resize', () => {
-    applyWidths();
-    syncHeight();
-  });
+  window.addEventListener('resize', applyWidths);
 
   const mq = window.matchMedia(BREAKPOINT);
   const onBreakpointChange = () => {
