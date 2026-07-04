@@ -26,11 +26,8 @@ html {
 }
 
 body {
-  display: flex;
+  position: relative;
   background: var(--background-fon);
-  flex-direction: column;
-  justify-content: flex-start;
-  min-height: 100vh;
   margin: 0;
   font-family: var(--font-family);
   font-weight: 400;
