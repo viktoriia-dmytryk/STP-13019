@@ -59,6 +59,7 @@
   -webkit-text-stroke: var(--title-stroke-width) var(--stroke-title);
   paint-order: stroke fill;
   text-rendering: geometricPrecision;
+  transform: translateY(-6px);
   -webkit-font-smoothing: antialiased;
 }
 
@@ -69,6 +70,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  transform: translateY(-6px);
 }
 
 .contact-text {
@@ -218,17 +220,23 @@
 @media only screen and (min-width: 1440px) {
   .contact-container {
     max-width: none;
-    min-height: 308px;
+    min-height: 432px;
     padding-right: 72px;
     padding-left: 72px;
+    justify-content: flex-start;
+    padding-top: 72px;
   }
 
   .contact-content {
-    width: 727px;
+    width: 364px;
     min-height: 288px;
+    padding-top: 0;
+    justify-content: flex-start;
   }
 
   .contact-content::before {
+    top: 0;
+    left: 0;
     width: 364px;
     height: 288px;
     border-radius: 50%;
@@ -250,29 +258,39 @@
   .contact-title {
     --title-stroke-width: 10px;
 
+    position: absolute;
+    top: 81px;
+    left: 50%;
     width: auto;
     min-height: auto;
-    margin-bottom: 32px;
+    margin-bottom: 26px;
     font-size: 40px;
     line-height: 1;
     letter-spacing: 0;
+    transform: translateX(-50%);
   }
 
   .contact-info {
-    width: auto;
+    position: absolute;
+    top: 147px;
+    left: 50%;
+    width: max-content;
     min-height: auto;
+    transform: translateX(-50%);
   }
 
   .contact-text {
     width: auto;
     margin-bottom: 12px;
     font-size: 16px;
+    white-space: nowrap;
   }
 
   .contact-address {
-    display: block;
+    display: flex;
     width: auto;
     min-height: auto;
+    gap: 4px;
     font-size: 18px;
   }
 
@@ -293,35 +311,35 @@
   }
 
   .contact-star-1 {
-    top: 16px;
+    top: 48px;
     left: calc(50% - 252px);
   }
 
   .contact-star-2 {
-    top: 16px;
+    top: 48px;
     right: calc(50% - 252px);
   }
 
   .contact-star-3 {
-    top: 126px;
+    top: 150px;
     left: calc(50% - 346px);
   }
 
   .contact-star-4 {
     --star-rotation: 0deg;
 
-    top: 126px;
+    top: 150px;
     right: calc(50% - 346px);
     left: auto;
   }
 
   .contact-star-5 {
-    bottom: 16px;
+    bottom: 64px;
     left: calc(50% - 252px);
   }
 
   .contact-star-6 {
     right: calc(50% - 252px);
-    bottom: 16px;
+    bottom: 64px;
   }
 }
