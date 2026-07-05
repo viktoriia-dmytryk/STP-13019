@@ -1,0 +1,104 @@
+.section.section-about {
+  padding-top: 0;
+}
+.about-title {
+  font-family: var(--third-family);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-title);
+  text-align: center;
+
+  -webkit-text-stroke: 6px #801d8a;
+  paint-order: stroke fill;
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+
+  @media only screen and (min-width: 1440px) {
+    font-size: 40px;
+    line-height: 48px;
+
+    -webkit-text-stroke: 12px #801d8a;
+  }
+}
+.about-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  @media only screen and (min-width: 1440px) {
+    font-size: 16px;
+    line-height: 150%;
+  }
+}
+.about-container {
+  width: 100%;
+  padding-top: 16px;
+  padding-left: 0;
+  padding-right: 0;
+  background-image: image-set(
+    url('../img/png/about-the-game-mobile@1x.png') 1x,
+    url('../img/png/about-the-game-mobile@2x.png') 2x
+  );
+  background-repeat: no-repeat;
+
+  @media only screen and (min-width: 1440px) {
+    padding: 72px;
+    background-image: image-set(
+      url('../img/png/about-the-game-desctop@1x.png') 1x,
+      url('../img/png/about-the-game-desctop@2x.png') 2x
+    );
+  }
+}
+
+.wrapper-about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 40px 44px 28px;
+  width: 375px;
+  height: 564px;
+  background-image: image-set(
+    url('../img/png/mobile-place@1x.png') 1x,
+    url('../img/png/mobile-place@2x.png') 2x
+  );
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+
+  @media only screen and (min-width: 1440px) {
+    gap: 25px;
+    padding: 45px 110px 24px;
+    flex-direction: row-reverse;
+    width: 1296px;
+    height: 440px;
+    background-image: image-set(
+      url('../img/png/desktop-place@1x.png') 1x,
+      url('../img/png/desktop-place@2x.png') 2x
+    );
+  }
+}
+
+.text-wrapper-about {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  @media only screen and (min-width: 1440px) {
+    gap: 24px;
+    max-width: 526px;
+  }
+}
+.about-fruit {
+  width: 264px;
+  height: 187px;
+  object-fit: contain;
+  display: block;
+
+  @media only screen and (min-width: 1440px) {
+    width: 510px;
+    height: 371px;
+  }
+}
