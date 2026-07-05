@@ -1,0 +1,17 @@
+* {
+  cursor:
+    url('../img/cursor/cursor.png') 4 0,
+    auto;
+}
+
+button,
+button *,
+a,
+a *,
+.swiper-pagination-bullet,
+[role='button'],
+[role='button'] * {
+  cursor:
+    url('../img/cursor/cursor-hover.png') 4 0,
+    pointer !important;
+}
