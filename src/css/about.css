@@ -34,6 +34,7 @@
 }
 .about-container {
   width: 100%;
+  aspect-ratio: 375 / 596;
   padding-top: 16px;
   padding-left: 0;
   padding-right: 0;
@@ -42,8 +43,11 @@
     url('../img/png/about-the-game-mobile@2x.png') 2x
   );
   background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 
   @media only screen and (min-width: 1440px) {
+    aspect-ratio: auto;
     padding: 72px;
     background-image: image-set(
       url('../img/png/about-the-game-desctop@1x.png') 1x,
@@ -60,13 +64,14 @@
   margin: 0 auto;
   padding: 40px 44px 28px;
   width: 375px;
-  height: 564px;
+  max-width: 100%;
+  min-height: 564px;
   background-image: image-set(
     url('../img/png/mobile-place@1x.png') 1x,
     url('../img/png/mobile-place@2x.png') 2x
   );
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% 100%; /* ← ключова зміна: завжди точно box, без crop */
   overflow: hidden;
 
   @media only screen and (min-width: 1440px) {
@@ -74,7 +79,7 @@
     padding: 45px 110px 24px;
     flex-direction: row-reverse;
     width: 1296px;
-    height: 440px;
+    min-height: 440px;
     background-image: image-set(
       url('../img/png/desktop-place@1x.png') 1x,
       url('../img/png/desktop-place@2x.png') 2x
