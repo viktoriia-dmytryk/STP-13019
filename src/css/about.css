@@ -71,7 +71,7 @@
     url('../img/png/mobile-place@2x.png') 2x
   );
   background-repeat: no-repeat;
-  background-size: 100% 100%; /* ← ключова зміна: завжди точно box, без crop */
+  background-size: 100% 100%;
   overflow: hidden;
 
   @media only screen and (min-width: 1440px) {
