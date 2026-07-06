@@ -1,0 +1,111 @@
+.gameplay-video {
+  display: block;
+  border-radius: 6px;
+  width: 100%;
+  max-width: 375px;
+  aspect-ratio: 375 / 383;
+  object-fit: cover;
+  border: transparent;
+  outline: none;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+  mask-image: radial-gradient(white, black);
+
+  @media only screen and (min-width: 1440px) {
+    max-width: 649px;
+    aspect-ratio: 649 / 660;
+  }
+}
+
+.how-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  @media only screen and (min-width: 1440px) {
+    flex-direction: row;
+    gap: 0;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+.how-title-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  @media only screen and (min-width: 1440px) {
+    gap: 16px;
+    margin-bottom: 60px;
+  }
+}
+
+.how-subtitle {
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+  @media only screen and (min-width: 1440px) {
+    font-size: 20px;
+    line-height: 120%;
+  }
+}
+.how-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  @media only screen and (min-width: 1440px) {
+    gap: 40px;
+    padding-left: 144px;
+  }
+}
+.how-list-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 8px;
+
+  @media only screen and (min-width: 1440px) {
+    padding: 16px;
+    gap: 16px;
+  }
+}
+
+.how-list-item:nth-last-child(even) {
+  padding-left: 48px;
+
+  @media only screen and (min-width: 1440px) {
+    padding-left: 64px;
+  }
+}
+.how-star-image {
+  width: 48px;
+  height: 48px;
+
+  @media only screen and (min-width: 1440px) {
+    width: 68px;
+    height: 68px;
+  }
+}
+
+.how-list-title {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 150%;
+  @media only screen and (min-width: 1440px) {
+    font-size: 20px;
+    line-height: 140%;
+    margin-bottom: 8px;
+  }
+}
+.how-list-text {
+  font-size: 14px;
+  line-height: 150%;
+  @media only screen and (min-width: 1440px) {
+    font-size: 16px;
+    line-height: 150%;
+  }
+}
+picture {
+  flex-shrink: 0;
+}
