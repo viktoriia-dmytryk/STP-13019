@@ -40,3 +40,22 @@ body {
 main {
   flex-grow: 0;
 }
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: none;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--heder);
+  border-radius: 6px;
+  border: 2px solid var(--white);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--circle-center);
+}
