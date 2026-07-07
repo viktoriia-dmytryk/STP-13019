@@ -1,3 +1,4 @@
 import './js/burgerMenu';
 import './js/faqAccordion';
 import './js/clouds';
+import './js/featuresSlider';
