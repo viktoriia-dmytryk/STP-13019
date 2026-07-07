@@ -17,5 +17,5 @@ A modern 3D puzzle experience built around satisfying object matching. We took t
 - **CSS3**
 - **JavaScript**
 - **Vite**
-- **Swiperr**
+- **Swiper**
 - **Accordion-JS**
