@@ -1,9 +1,9 @@
-const features = document.querySelector('.features');
-const slider = document.querySelector('.features-slider');
-const slides = [...document.querySelectorAll('.features-slide')];
-const prevButton = document.querySelector('.features-nav-prev');
-const nextButton = document.querySelector('.features-nav-next');
-const pagination = document.querySelector('.features-pagination');
+const features = document.querySelector('[data-features]');
+const slider = document.querySelector('[data-features-slider]');
+const slides = [...document.querySelectorAll('[data-features-slide]')];
+const prevButton = document.querySelector('[data-features-prev]');
+const nextButton = document.querySelector('[data-features-next]');
+const pagination = document.querySelector('[data-features-pagination]');
 const mobileMedia = window.matchMedia('(max-width: 767px)');
 
 let activeIndex = mobileMedia.matches ? 4 : 2;
@@ -31,9 +31,9 @@ const renderFeaturesSlider = () => {
   });
 
   pagination
-    ?.querySelectorAll('.features-pagination-dot')
+    ?.querySelectorAll('[data-features-pagination-dot]')
     .forEach((dot, index) => {
-      dot.classList.toggle('is-active', index === activeDotIndex);
+      dot.dataset.active = String(index === activeDotIndex);
     });
 };
 
@@ -45,12 +45,12 @@ const createPagination = () => {
   pagination.innerHTML = slides
     .map(
       (_, index) =>
-        `<button class="features-pagination-dot" type="button" aria-label="Show feature ${index + 1}"></button>`
+        `<button class="features-pagination-dot" data-features-pagination-dot data-active="false" type="button" aria-label="Show feature ${index + 1}"></button>`
     )
     .join('');
 
   pagination
-    .querySelectorAll('.features-pagination-dot')
+    .querySelectorAll('[data-features-pagination-dot]')
     .forEach((dot, index) => {
       dot.addEventListener('click', () => {
         activeIndex = mobileMedia.matches

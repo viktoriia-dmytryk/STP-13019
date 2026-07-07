@@ -1,4 +1,4 @@
-<section class="features" id="features">
+<section class="features" id="features" data-features>
   <div class="container features-container">
     <div class="features-heading">
       <h2 class="features-title">Features</h2>
@@ -10,13 +10,14 @@
     <div class="features-slider-shell">
       <button
         class="features-nav features-nav-prev"
+        data-features-prev
         type="button"
         aria-label="Previous feature"
       ></button>
 
-      <div class="features-slider">
+      <div class="features-slider" data-features-slider>
         <ul class="features-list">
-          <li class="features-slide">
+          <li class="features-slide" data-features-slide>
             <article class="features-card">
               <picture class="features-card-picture">
                 <source
@@ -43,7 +44,7 @@
             </article>
           </li>
 
-          <li class="features-slide">
+          <li class="features-slide" data-features-slide>
             <article class="features-card">
               <picture class="features-card-picture">
                 <source
@@ -70,7 +71,7 @@
             </article>
           </li>
 
-          <li class="features-slide">
+          <li class="features-slide" data-features-slide>
             <article class="features-card">
               <picture class="features-card-picture">
                 <source
@@ -97,7 +98,7 @@
             </article>
           </li>
 
-          <li class="features-slide">
+          <li class="features-slide" data-features-slide>
             <article class="features-card">
               <picture class="features-card-picture">
                 <source
@@ -124,7 +125,7 @@
             </article>
           </li>
 
-          <li class="features-slide">
+          <li class="features-slide" data-features-slide>
             <article class="features-card">
               <picture class="features-card-picture">
                 <source
@@ -155,11 +156,12 @@
 
       <button
         class="features-nav features-nav-next"
+        data-features-next
         type="button"
         aria-label="Next feature"
       ></button>
     </div>
 
-    <div class="features-pagination" aria-hidden="true"></div>
+    <div class="features-pagination" data-features-pagination aria-hidden="true"></div>
   </div>
 </section>
