@@ -55,7 +55,7 @@ function shuffle(arr) {
 
 function initCloudsFlight() {
   const layer = document.createElement('div');
-  layer.className = 'clouds-layer';
+  layer.setAttribute('data-clouds-layer', '');
   layer.setAttribute('aria-hidden', 'true');
 
   const isDesktop = window.matchMedia(BREAKPOINT).matches;
@@ -70,13 +70,13 @@ function initCloudsFlight() {
     const widthPx = getWidthForRatio(cfg.sizeRatio);
 
     const anchor = document.createElement('div');
-    anchor.className = 'cloud-anchor';
+    anchor.setAttribute('data-cloud-anchor', '');
     anchor.style.top = cfg.top + '%';
     anchor.style.opacity = cfg.opacity ?? 1;
     anchor.style.width = widthPx + 'px';
 
     const wrap = document.createElement('div');
-    wrap.className = 'cloud-wrap';
+    wrap.setAttribute('data-cloud-wrap', '');
 
     const duration = getDurationForRatio(cfg.sizeRatio);
     wrap.style.animationDuration = duration + 's';
